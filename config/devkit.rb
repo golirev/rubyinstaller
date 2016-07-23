@@ -88,4 +88,16 @@ module DevKitInstaller
     }
   )
 
+  if ENV['MSYS_ADD']
+    MSYS.files[:url_1] = MSYS.files[:url_1] + [
+      'git-2.9.1-1-i686.pkg.tar.xz',
+      'libopenssl-1.0.2.h-1-i686.pkg.tar.xz',
+      # add for knap-build
+      'automake1.11-1.11.6-3-any.pkg.tar.xz',
+      # dash added for autorebase.bat execution
+      'dash-0.5.8-1-i686.pkg.tar.xz',
+      'vim-7.4.1721-1-i686.pkg.tar.xz'
+    ]
+  end
+
 end
