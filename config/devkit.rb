@@ -34,7 +34,7 @@ module DevKitInstaller
     :files => {
       :url_1 => [
         'msys2-runtime-2.5.2-2-i686.pkg.tar.xz',
-        'filesystem-2016.07-1-i686.pkg.tar.xz',
+        'filesystem-2016.07-2-i686.pkg.tar.xz',
         'msys2-launcher-git-0.3.29.4028b6c-1-i686.pkg.tar.xz',
         'rebase-4.4.2-1-i686.pkg.tar.xz',
         'libiconv-1.14-2-i686.pkg.tar.xz',
@@ -63,7 +63,7 @@ module DevKitInstaller
         'less-481-1-i686.pkg.tar.xz',
         'findutils-4.6.0-1-i686.pkg.tar.xz',
         'perl-5.22.1-1-i686.pkg.tar.xz',
-        'mintty-1~2.3.6-1-i686.pkg.tar.xz',
+        'mintty-1~2.4.0-1-i686.pkg.tar.xz',
         'autoconf-2.69-3-any.pkg.tar.xz',
         'automake1.15-1.15-2-any.pkg.tar.xz',
         'automake-wrapper-10-1-any.pkg.tar.xz',
@@ -91,6 +91,7 @@ module DevKitInstaller
   if ENV['MSYS_ADD']
     MSYS.files[:url_1] = MSYS.files[:url_1] + [
       'git-2.9.1-1-i686.pkg.tar.xz',
+      'libcurl-7.49.1-1-i686.pkg.tar.xz',
       'libopenssl-1.0.2.h-1-i686.pkg.tar.xz',
       # add for knap-build
       'automake1.11-1.11.6-3-any.pkg.tar.xz',
