@@ -18,7 +18,7 @@ module RubyInstaller
       :file => 'cacert.pem'
     )
 
-    BaseVersions = %w(18 19 20 21 22 23)
+    BaseVersions = %w(18 19 20 21 22 23 24)
 
     Ruby18 = OpenStruct.new(
       :number  => "18",
@@ -210,6 +210,35 @@ module RubyInstaller
       :installer_guid_x64 => "{96A4CEEE-5ACC-4FB2-AAB6-8152D5AB0C9E}"
     )
 
+    Ruby24 = OpenStruct.new(
+      :number  => "24",
+      :version => "2.4.0-preview1",
+      :short_version => 'ruby24',
+      :url => "https://cache.ruby-lang.org/pub/ruby/2.4/",
+      :checkout => 'http://svn.ruby-lang.org/repos/ruby/trunk',
+      :checkout_target => 'downloads/ruby_2_4',
+      :target => 'sandbox/ruby_2_4',
+      :doc_target => 'sandbox/doc/ruby24',
+      :build_target => 'sandbox/ruby24_build',
+      :install_target => 'sandbox/ruby24_mingw',
+      :patches => 'resources/patches/ruby24',
+      :configure_options => [
+        '--enable-shared',
+        '--disable-install-doc',
+        'debugflags=-g',
+        "CPPFLAGS='-DFD_SETSIZE=2048'"
+      ],
+      :files => [
+        "ruby-2.4.0-preview1.tar.bz2"
+      ],
+      :dependencies => [
+        :ffi, :gdbm, :openssl, :yaml, :zlib, :tcl, :tk
+      ],
+      :excludes => [],
+      :installer_guid => "{F154BCCE-795E-43B6-88C1-0D2E25CB7651}",
+      :installer_guid_x64 => "{FF24E7EB-1715-4ACB-9183-E0D1EBC6EDC7}"
+    )
+
     # COMPAT mode for Ruby 1.9.2
     if ENV['COMPAT'] then
       Ruby19.version = "1.9.2-p290"
@@ -240,6 +269,7 @@ module RubyInstaller
         Ruby21 => '{04C58EFB-39FF-42E8-ADA1-3F588D2F2E10}',
         Ruby22 => "{245A7D99-7BDE-4CC7-A872-63E47C73174B}",
         Ruby23 => "{E5385270-5AEF-462F-BEA0-27F72897E2A4}",
+        Ruby24 => "{D0870EA0-291E-4538-A958-EF40AB795221}",
       }.each do |k, v|
           k.patches = nil
           k.target = File.expand_path(ENV['LOCAL'].gsub('\\', File::SEPARATOR))
@@ -269,6 +299,7 @@ module RubyInstaller
         Ruby21.dependencies.delete(pkg)
         Ruby22.dependencies.delete(pkg)
         Ruby23.dependencies.delete(pkg)
+        Ruby24.dependencies.delete(pkg)
       end
     end
 
