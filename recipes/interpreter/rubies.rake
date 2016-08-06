@@ -196,7 +196,7 @@ interpreters.each do |package|
         old_gem_path = ENV.delete("GEM_PATH")
 
         cd package.build_target do
-          sh "make check"
+          sh "make #{ENV["MAKE_OPT"]} check"
         end
 
         ENV["GEM_HOME"] = old_gem_home if old_gem_home
