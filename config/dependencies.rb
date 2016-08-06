@@ -17,27 +17,27 @@ module RubyInstaller
 
   KNAPSACK_PACKAGES['openssl'] = OpenStruct.new(
     :human_name => "OpenSSL",
-    :version => '1.0.1l',
+    :version => '1.0.2g',
     :url => "http://dl.bintray.com/oneclick/OpenKnapsack",
     :target => 'sandbox/openssl',
     :files => [
-      'openssl-1.0.1l-x86-windows.tar.lzma'
+      'openssl-1.0.2g-x86-windows.tar.lzma'
     ],
     :x64_files => [
-      'openssl-1.0.1l-x64-windows.tar.lzma'
+      'openssl-1.0.2g-x64-windows.tar.lzma'
     ]
   )
 
   KNAPSACK_PACKAGES['ffi'] = OpenStruct.new(
     :human_name => "libffi",
-    :version => '3.0.11',
+    :version => '3.2.1',
     :url => "http://dl.bintray.com/oneclick/OpenKnapsack",
     :target => 'sandbox/libffi',
     :files => [
-      'libffi-3.0.11-x86-windows.tar.lzma'
+      'libffi-3.2.1-x86-windows.tar.lzma'
     ],
     :x64_files => [
-      'libffi-3.0.11-x64-windows.tar.lzma'
+      'libffi-3.2.1-x64-windows.tar.lzma'
     ]
   )
 
@@ -69,14 +69,14 @@ module RubyInstaller
 
   KNAPSACK_PACKAGES["gdbm"] = OpenStruct.new(
     :human_name => "GDBM",
-    :version => "1.8.3",
+    :version => "1.10",
     :url => "http://dl.bintray.com/oneclick/OpenKnapsack",
     :target => "sandbox/gdbm",
     :files => [
-      "gdbm-1.8.3-x86-windows.tar.lzma"
+      "gdbm-1.10-x86-windows.tar.lzma"
     ],
     :x64_files => [
-      "gdbm-1.8.3-x64-windows.tar.lzma"
+      "gdbm-1.10-x64-windows.tar.lzma"
     ]
   )
 
@@ -95,28 +95,28 @@ module RubyInstaller
 
   KNAPSACK_PACKAGES["tcl"] = OpenStruct.new(
     :human_name => "Tcl",
-    :version => "8.5.12",
+    :version => "8.5.19",
     :url => "http://dl.bintray.com/oneclick/OpenKnapsack",
     :target => "sandbox/tcl",
     :files => [
-      "tcl-8.5.12-x86-windows.tar.lzma"
+      "tcl-8.5.19-x86-windows.tar.lzma"
     ],
     :x64_files => [
-      "tcl-8.5.12-x64-windows.tar.lzma"
+      "tcl-8.5.19-x64-windows.tar.lzma"
     ]
   )
 
   KNAPSACK_PACKAGES["tk"] = OpenStruct.new(
     :human_name => "Tk",
-    :version => "8.5.12",
+    :version => "8.5.19",
     :url => "http://dl.bintray.com/oneclick/OpenKnapsack",
     :target => "sandbox/tk",
     :patches => "resources/patches/tk",
     :files => [
-      "tk-8.5.12-x86-windows.tar.lzma"
+      "tk-8.5.19-x86-windows.tar.lzma"
     ],
     :x64_files => [
-      "tk-8.5.12-x64-windows.tar.lzma"
+      "tk-8.5.19-x64-windows.tar.lzma"
     ],
     :dependencies => [
       :tcl
