@@ -212,7 +212,7 @@ module RubyInstaller
 
     Ruby24 = OpenStruct.new(
       :number  => "24",
-      :version => "2.4.0-preview2",
+      :version => "2.4.0-preview3",
       :short_version => 'ruby24',
       :url => "https://cache.ruby-lang.org/pub/ruby/2.4/",
       :checkout => 'http://svn.ruby-lang.org/repos/ruby/trunk',
@@ -229,10 +229,10 @@ module RubyInstaller
         "CPPFLAGS='-DFD_SETSIZE=2048'"
       ],
       :files => [
-        "ruby-2.4.0-preview2.tar.bz2"
+        "ruby-2.4.0-preview3.tar.bz2"
       ],
       :dependencies => [
-        :ffi, :gdbm, :openssl, :yaml, :zlib, :tcl, :tk
+        :ffi, :gdbm, :openssl, :yaml, :zlib
       ],
       :excludes => [],
       :installer_guid => "{F154BCCE-795E-43B6-88C1-0D2E25CB7651}",
