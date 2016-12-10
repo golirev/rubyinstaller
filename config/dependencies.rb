@@ -69,14 +69,14 @@ module RubyInstaller
 
   KNAPSACK_PACKAGES["gdbm"] = OpenStruct.new(
     :human_name => "GDBM",
-    :version => "1.8.3",
+    :version => "1.10",
     :url => "http://dl.bintray.com/oneclick/OpenKnapsack",
     :target => "sandbox/gdbm",
     :files => [
-      "gdbm-1.8.3-x86-windows.tar.lzma"
+      "gdbm-1.10-x86-windows.tar.lzma"
     ],
     :x64_files => [
-      "gdbm-1.8.3-x64-windows.tar.lzma"
+      "gdbm-1.10-x64-windows.tar.lzma"
     ]
   )
 
